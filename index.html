@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crippy - プライバシーポリシー</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f7f8fb;
+      color: #222;
+      line-height: 1.65;
+    }
+    header {
+      background: #0d3b66;
+      color: white;
+      padding: 20px 24px;
+    }
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .tabs {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .tab-button {
+      border: none;
+      background: #ffffff;
+      color: #0d3b66;
+      padding: 12px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    }
+    .tab-button:hover {
+      transform: translateY(-1px);
+      background: #e6effa;
+    }
+    .tab-button.active {
+      background: #0d3b66;
+      color: white;
+    }
+    .panel {
+      display: none;
+      animation: fadeIn .2s ease-out;
+    }
+    .panel.active {
+      display: block;
+    }
+    details {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 1px 8px rgba(0,0,0,.08);
+      margin-bottom: 16px;
+      padding: 16px 20px;
+    }
+    summary {
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      outline: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary {
+      color: #0d3b66;
+    }
+    details p,
+    details ul {
+      margin: 12px 0 0 0;
+    }
+    .note {
+      margin-top: 12px;
+      padding: 16px;
+      background: #eef6ff;
+      border-left: 4px solid #0d3b66;
+      border-radius: 8px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Crippy</h1>
+      <p>本アプリのプライバシーポリシーと利用規約をタブで確認できます。</p>
+    </div>
+  </header>
+  <main class="container">
+    <div class="tabs" role="tablist" aria-label="ページタブ">
+      <button class="tab-button active" type="button" data-target="home" role="tab" aria-selected="true">ホーム</button>
+      <button class="tab-button" type="button" data-target="privacy" role="tab" aria-selected="false">プライバシーポリシー</button>
+      <button class="tab-button" type="button" data-target="terms" role="tab" aria-selected="false">利用規約</button>
+    </div>
 
+    <section id="home" class="panel active" role="tabpanel">
+      <h2>ようこそ</h2>
+      <p>Crippyへようこそ。こちらはメモ管理アプリです。上部のタブから「プライバシーポリシー」または「利用規約」を選択すると、本アプリにおける情報の取扱いや利用条件を確認できます。</p>
+    </section>
+
+    <section id="privacy" class="panel" role="tabpanel" hidden>
+      <h2>プライバシーポリシー</h2>
+      <p>本プライバシーポリシーは、「Crippy」（以下「本アプリ」）における、ユーザー情報の取扱いについて定めるものです。本アプリをご利用いただくことで、本ポリシーに同意したものとみなします。</p>
+
+      <details open>
+        <summary>1. 取得する情報</summary>
+        <p>本アプリは、ユーザーの入力により作成されたフォルダ名・メモ内容等の情報（以下「ユーザーコンテンツ」）を端末内に保存します。</p>
+        <p>本アプリは、現時点では以下の情報を自動的に取得しません。</p>
+        <ul>
+          <li>氏名、メールアドレス、電話番号等の個人情報</li>
+          <li>位置情報</li>
+          <li>端末固有ID（広告ID等）を用いた追跡情報</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2. 利用目的</summary>
+        <p>本アプリは、ユーザーコンテンツを以下の目的で利用します。</p>
+        <ul>
+          <li>ユーザーが本アプリ上でメモ管理、閲覧、編集を行うため</li>
+          <li>不具合修正や品質改善のため（ただし、現時点では個人を特定する情報の収集は行いません）</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3. 保存場所と同期</summary>
+        <p>ユーザーコンテンツは原則としてユーザーの端末内（ローカル）に保存されます。</p>
+        <p>本アプリは、現時点ではクラウド同期機能を提供していません。</p>
+        <p>端末の初期化、アンインストール、故障、紛失等によりデータが消失した場合であっても、開発者は一切の責任を負いません。</p>
+      </details>
+
+      <details>
+        <summary>4. 第三者提供</summary>
+        <p>本アプリは、現時点ではユーザー情報を第三者へ提供しません。</p>
+      </details>
+
+      <details>
+        <summary>5. 外部送信・第三者サービス</summary>
+        <p>本アプリは、現時点では広告配信、アクセス解析、クラッシュ解析等の第三者サービスを利用していません。</p>
+        <p>将来これらを導入する場合は、本ポリシーを改定し、必要な事項（送信先、送信される情報、利用目的等）を明記します。</p>
+      </details>
+
+      <details>
+        <summary>6. セキュリティ</summary>
+        <p>本アプリは、ユーザーコンテンツの保護のために合理的な対策を講じるよう努めます。</p>
+        <p>しかしながら、インターネット通信の完全な安全性は保証されるものではなく、端末の紛失・盗難、マルウェア感染、不正アクセス等により発生した損害について、開発者は一切の責任を負いません。</p>
+      </details>
+
+      <details>
+        <summary>7. データの損失および責任の制限</summary>
+        <p>本アプリの利用に関連して発生したデータ損失、間接的損害、特別損害、逸失利益、その他一切の損害について、開発者は法令で認められる範囲内で最大限責任を負わないものとします。</p>
+      </details>
+
+      <details>
+        <summary>8. ユーザーによる管理</summary>
+        <p>ユーザーは、本アプリの削除や端末設定等により、保存データを削除できます。</p>
+        <p>本アプリ内の削除機能を利用した場合、削除されたデータは原則として復元できません。</p>
+      </details>
+
+      <details>
+        <summary>9. 有料機能について</summary>
+        <p>本アプリは将来的に有料機能（プレミアムプラン）を提供する場合があります。</p>
+        <p>料金、支払い方法、返金ポリシー等の詳細は、別途定める利用規約または販売条件に従います。</p>
+      </details>
+
+      <details>
+        <summary>10. 改定</summary>
+        <p>本ポリシーは、機能追加・法令改正等に伴い、予告なく変更される場合があります。</p>
+      </details>
+
+      <details>
+        <summary>11. お問い合わせ</summary>
+        <p>本ポリシーに関するお問い合わせは、設定画面に掲載する連絡手段（今後追加予定）からご連絡ください。</p>
+      </details>
+
+      <div class="note">
+        <strong>制定日：</strong>2026年2月12日
+      </div>
+    </section>
+
+    <section id="terms" class="panel" role="tabpanel" hidden>
+      <h2>利用規約</h2>
+      <p>本利用規約（以下「本規約」）は、「Crippy」（以下「本アプリ」）の利用条件を定めるものです。本アプリを利用することにより、ユーザーは本規約に同意したものとみなされます。</p>
+
+      <details open>
+        <summary>第1条（利用目的）</summary>
+        <p>本アプリは、ユーザーがメモおよびフォルダ管理を行うためのツールとして提供されます。</p>
+      </details>
+
+      <details>
+        <summary>第2条（利用責任）</summary>
+        <p>本アプリの利用は、ユーザー自身の責任において行うものとします。</p>
+        <p>本アプリの利用に関連して発生したいかなる損害についても、開発者は法令で認められる範囲内で最大限責任を負わないものとします。</p>
+      </details>
+
+      <details>
+        <summary>第3条（データの保存および損失）</summary>
+        <p>本アプリのデータは原則として端末内に保存されます。</p>
+        <p>端末の故障、紛失、誤操作、OSの不具合、アプリ削除等によるデータ消失について、開発者は一切の責任を負いません。</p>
+        <p>重要な情報については、ユーザー自身の責任でバックアップを行ってください。</p>
+      </details>
+
+      <details>
+        <summary>第4条（有料機能）</summary>
+        <p>本アプリは将来的に有料機能（プレミアムプラン）を提供する場合があります。</p>
+        <p>有料機能の購入は、Google Playの決済システムを通じて行われます。</p>
+      </details>
+
+      <details>
+        <summary>第5条（返金ポリシー）</summary>
+        <p>有料機能に関する返金は、Google Playの返金ポリシーに従います。</p>
+        <p>開発者は、法令に基づく場合を除き、個別の返金対応を行いません。</p>
+      </details>
+
+      <details>
+        <summary>第6条（禁止事項）</summary>
+        <p>ユーザーは、以下の行為を行ってはなりません。</p>
+        <ul>
+          <li>本アプリの不正利用</li>
+          <li>リバースエンジニアリング、改ざん</li>
+          <li>法令または公序良俗に反する行為</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>第7条（サービスの変更・終了）</summary>
+        <p>開発者は、ユーザーへの事前通知なく、本アプリの内容変更、提供停止、終了を行うことがあります。</p>
+        <p>これにより生じた損害について、開発者は責任を負いません。</p>
+      </details>
+
+      <details>
+        <summary>第8条（知的財産権）</summary>
+        <p>本アプリに関する著作権その他の知的財産権は、開発者に帰属します。</p>
+      </details>
+
+      <details>
+        <summary>第9条（規約の変更）</summary>
+        <p>本規約は、必要に応じて変更される場合があります。</p>
+        <p>変更後の規約は、本アプリ内に掲載された時点で効力を生じます。</p>
+      </details>
+
+      <div class="note">
+        <strong>制定日：</strong>2026年2月12日
+      </div>
+    </section>
+  </main>
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const panels = document.querySelectorAll('.panel');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.dataset.target;
+
+        buttons.forEach(btn => {
+          const selected = btn === button;
+          btn.classList.toggle('active', selected);
+          btn.setAttribute('aria-selected', selected);
+        });
+
+        panels.forEach(panel => {
+          const active = panel.id === targetId;
+          panel.classList.toggle('active', active);
+          panel.hidden = !active;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
